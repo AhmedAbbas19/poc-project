@@ -15,16 +15,17 @@ export class AppComponent {
   lastPing?: Date = null;
 
   constructor(private authService:AuthService, private idle: Idle, private keepalive: Keepalive){
-    this.authService.activeUser.subscribe(user => {
+    authService.activeUser.subscribe(user => {
       this.isAuthenticated = !!user;
       if(this.isAuthenticated){
         this.autoLogout()
       }
     })
+    authService.autoLogin()
   }
 
   autoLogout(){
-    this.idle.setIdle(60);
+    this.idle.setIdle(6000000);
      this.idle.setTimeout(30);
      this.idle.setInterrupts(DEFAULT_INTERRUPTSOURCES);
      this.idle.onIdleEnd.subscribe(() => this.isIdle = false);
@@ -34,7 +35,7 @@ export class AppComponent {
      });
      this.idle.onTimeoutWarning.subscribe((countdown) => {
        this.isIdle = true
-       this.idleState = 'You will be logged out in ' + countdown + ' seconds!' 
+       this.idleState = 'You will be logged out in ' + countdown + ' seconds!'
       });
      this.keepalive.interval(15);
      this.keepalive.onPing.subscribe(() => this.lastPing = new Date());

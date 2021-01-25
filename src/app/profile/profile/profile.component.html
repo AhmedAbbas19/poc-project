@@ -1,1 +1,13 @@
-<p>profile works!</p>
+
+    <h2>Trying ngx-swiper</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <swiper class="swiper-container" [config]="config" (indexChange)="onIndexChange($event)">
+          <div *ngFor="let slide of slides" class="swiper-slide">
+            <div class="text-center">
+              <img [src]="slide" alt="" class="slide" class="w-100">
+            </div>
+          </div>
+        </swiper>
+    </div>
+    </div>

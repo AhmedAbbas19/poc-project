@@ -1,1 +1,81 @@
-<p>dashboard works!</p>
+<h2 class="pt-3">Dashboard</h2>
+
+<div class="row py-4">
+  <div class="col-md-4">
+    <div class="bg-light p-3 rounded">
+      <h6>New Customers</h6>
+      <app-line-chart
+        [chartdata]="newCustomersData.data"
+        [chartlabels]="newCustomersData.labels"
+        [chartoptions]="newCustomersData.options"
+        [height]="'230'"
+      ></app-line-chart>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="bg-light p-3 rounded">
+      <h6>Skills Rate</h6>
+      <app-radar-chart
+        [chartdata]="skillsRateData.data"
+        [chartlabels]="skillsRateData.labels"
+        [chartoptions]="skillsRateData.options"
+        [height]="'230'"
+      ></app-radar-chart>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="bg-light p-3 rounded">
+      <h6>New Orders</h6>
+      <app-bar-chart
+        [chartdata]="newOrdersData.data"
+        [chartlabels]="newOrdersData.labels"
+        [chartoptions]="newOrdersData.options"
+        [height]="'230'"
+      ></app-bar-chart>
+    </div>
+  </div>
+</div>
+
+<div class="row py-4">
+  <div class="col-md-9">
+    <div class="bg-light p-3 rounded">
+      <h6>Revenue</h6>
+      <app-bar-chart
+        [chartdata]="newOrdersData.data"
+        [chartlabels]="newOrdersData.labels"
+        [chartoptions]="newOrdersData.options"
+        [height]="'300'"
+      ></app-bar-chart>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="bg-light p-3 rounded">
+      <h6>Skills Rate</h6>
+      <app-radar-chart
+        [chartdata]="skillsRateData.data"
+        [chartlabels]="skillsRateData.labels"
+        [chartoptions]="skillsRateData.options"
+        [height]="'300'"
+      ></app-radar-chart>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <ngx-datatable
+        class="material fullwidth"
+        [rows]="rows"
+        [columns]="columns"
+        [columnMode]="'force'"
+        [loadingIndicator]="loadingIndicator"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        rowHeight="auto"
+        [reorderable]="reorderable"
+        [scrollbarH]="true"
+      >
+      </ngx-datatable>
+    </div>
+</div>
