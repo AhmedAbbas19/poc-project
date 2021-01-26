@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import {Idle, DEFAULT_INTERRUPTSOURCES} from '@ng-idle/core';
 import {Keepalive} from '@ng-idle/keepalive';
 import { AuthService } from 'src/app/auth/auth.service';
+import {MatDialog} from '@angular/material/dialog';
+import { DialogComponent } from './common/components/dialog/dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +16,7 @@ export class AppComponent {
   isIdle = false;
   lastPing?: Date = null;
 
-  constructor(private authService:AuthService, private idle: Idle, private keepalive: Keepalive){
+  constructor(private authService:AuthService, private idle: Idle, private keepalive: Keepalive, public dialog: MatDialog){
     authService.activeUser.subscribe(user => {
       this.isAuthenticated = !!user;
       if(this.isAuthenticated){
@@ -24,16 +26,32 @@ export class AppComponent {
     authService.autoLogin()
   }
 
+  openDialog(countdown): void {
+    if(!this.isIdle){
+      const dialogRef = this.dialog.open(DialogComponent, {
+        data: {title: "Idle state!", body: 'You will be logged out in ' + countdown + ' seconds!'}
+      });
+  
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed', result);
+      });
+    }
+  }
+
   autoLogout(){
     this.idle.setIdle(6000000);
      this.idle.setTimeout(30);
      this.idle.setInterrupts(DEFAULT_INTERRUPTSOURCES);
-     this.idle.onIdleEnd.subscribe(() => this.isIdle = false);
+     this.idle.onIdleEnd.subscribe(() => {
+       this.isIdle = false
+      });
      this.idle.onTimeout.subscribe(() => {
        this.logout();
        this.isIdle = false
+       this.dialog.closeAll();
      });
      this.idle.onTimeoutWarning.subscribe((countdown) => {
+       this.openDialog(countdown)
        this.isIdle = true
        this.idleState = 'You will be logged out in ' + countdown + ' seconds!'
       });

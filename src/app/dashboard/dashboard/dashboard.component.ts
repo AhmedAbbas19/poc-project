@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { newCustomers, newOrders, skillsRate, projects } from "../chartsdata"
+import { newCustomers, newOrders, skillsRate, projects } from "../chartsdata";
+import * as moment from 'moment-timezone'
 
 @Component({
   selector: 'app-dashboard',
@@ -16,6 +17,8 @@ export class DashboardComponent implements OnInit {
   columns = []
   loadingIndicator = true;
   reorderable = true;
+
+  time
   constructor() { 
     setTimeout(() => { // simulating backend call delay
       this.rows = projects
@@ -25,19 +28,10 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
-
-  getRowClass(row){
-    switch(row.status){
-      case "pending":
-        return "bg-success"
-      case "released":
-        return "bg-danger"
-      case "review":
-        return "bg-warning"
-      case "comming soon":
-        return "bg-info"
-    }
+    let curZone = moment.tz.guess();
+    setInterval(()=>{
+      this.time = moment.tz(moment(), curZone).format('MMMM Do YYYY, h:mm:ss a')
+    },1000)
   }
 
 }

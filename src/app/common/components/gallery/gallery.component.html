@@ -1,0 +1,14 @@
+<div class="">
+      
+    <swiper
+      class="swiper-container"
+      [config]="config"
+      (indexChange)="onIndexChange($event)"
+    >
+      <div *ngFor="let slide of slides" class="swiper-slide">
+        <div class="text-center">
+          <img [src]="slide" alt="" class="slide" class="w-100" />
+        </div>
+      </div>
+    </swiper>
+</div>

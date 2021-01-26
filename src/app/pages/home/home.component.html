@@ -1,5 +1,5 @@
 <h2 class="py-4">Trying ng-bootstrap</h2>
-<ngb-accordion [closeOthers]="true" activeIds="static-1">
+  <ngb-accordion [closeOthers]="true" activeIds="static-1">
     <ngb-panel id="static-1" title="Simple">
       <ng-template ngbPanelContent>
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
@@ -34,4 +34,35 @@
       </ng-template>
     </ngb-panel>
   </ngb-accordion>
+
+
+  <h2 class="py-4">Trying Hammerjs</h2>
+  <div class="gesture">
+    <div class="gesture__zone">
+      <div class="gesture__square" 
+      [style.left]="square.x+'px'" 
+      [style.top]="square.y+'px'" 
+      [style.transform]="'rotateX('+square.rotateX+'deg)'"
+      (panstart)="onPanStart($event,'square')" 
+      (panmove)="onPan($event,'square')" 
+      (panend)="onPanEnd('square')"
+      (tap)="onTap('square')"
+      >
+        <p>{{square.title}}</p>
+      </div>
+      <div class="gesture__circle"
+      [style.right]="-circle.x+'px'" 
+      [style.top]="circle.y+'px'" 
+      [style.transform]="'scale('+circle.scale+')'" 
+      (panstart)="onPanStart($event,'circle')" 
+      (panmove)="onPan($event,'circle')" 
+      (panend)="onPanEnd('circle')"
+      (doubletap)="onDoubletap('circle')"
+      >
+        <p>{{circle.title}}</p>
+      </div>
+    </div>
+  </div>
+
+  
   

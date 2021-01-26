@@ -1,8 +1,9 @@
+<h2 class="py-4">Login</h2>
 <div class="alert alert-danger" role="alert" *ngIf="errors">{{errors.message}}</div>
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email" [ngClass]="{'is-invalid': (loginForm.get('email').invalid && (loginForm.get('email').dirty || loginForm.get('email').touched))}">
+      <input type="email" class="bg-dark form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email" [ngClass]="{'is-invalid': (loginForm.get('email').invalid && (loginForm.get('email').dirty || loginForm.get('email').touched))}">
       <ng-container *ngIf="loginForm.get('email').invalid && (loginForm.get('email').dirty || loginForm.get('email').touched)">
         <div id="exampleInputEmail1" class="invalid-feedback" *ngIf="loginForm.get('email').hasError('required')">Email is required field!</div>
         <div id="exampleInputEmail1" class="invalid-feedback" *ngIf="loginForm.get('email').hasError('email')">Enter a valid email!</div>
@@ -10,7 +11,7 @@
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password" [ngClass]="{'is-invalid': (loginForm.get('password').invalid && (loginForm.get('password').dirty || loginForm.get('password').touched))}">
+      <input type="password" class="bg-dark form-control" id="exampleInputPassword1" formControlName="password" [ngClass]="{'is-invalid': (loginForm.get('password').invalid && (loginForm.get('password').dirty || loginForm.get('password').touched))}">
       <ng-container *ngIf="loginForm.get('password').invalid && (loginForm.get('password').dirty || loginForm.get('password').touched)">
         <div id="exampleInputPassword1" class="invalid-feedback" *ngIf="loginForm.get('password').hasError('required')">Password is required field!</div>
         <div id="exampleInputPassword1" class="invalid-feedback" *ngIf="loginForm.get('password').hasError('minlength')">Password is too short!</div>
