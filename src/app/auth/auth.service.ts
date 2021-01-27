@@ -3,6 +3,7 @@ import { BehaviorSubject, of, throwError } from 'rxjs';
 import jwt_decode from "jwt-decode";
 import { Router } from '@angular/router';
 
+
 interface User{
   id: string,
   fname: string,
@@ -26,7 +27,8 @@ const users:User[] = [
 export class AuthService {
 
   activeUser = new BehaviorSubject<User>(null);
-  constructor(private router: Router) { }
+  constructor(private router: Router){
+  }
 
   login({email, password}){
     const user:User = users.find(u => u.email === email);

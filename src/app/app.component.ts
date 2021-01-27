@@ -4,6 +4,7 @@ import {Keepalive} from '@ng-idle/keepalive';
 import { AuthService } from 'src/app/auth/auth.service';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogComponent } from './common/components/dialog/dialog.component';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,7 @@ export class AppComponent {
   isIdle = false;
   lastPing?: Date = null;
 
-  constructor(private authService:AuthService, private idle: Idle, private keepalive: Keepalive, public dialog: MatDialog){
+  constructor(private authService:AuthService, private idle: Idle, private keepalive: Keepalive, private dialog: MatDialog){
     authService.activeUser.subscribe(user => {
       this.isAuthenticated = !!user;
       if(this.isAuthenticated){
@@ -46,7 +47,7 @@ export class AppComponent {
        this.isIdle = false
       });
      this.idle.onTimeout.subscribe(() => {
-       this.logout();
+       this.authService.logout();
        this.isIdle = false
        this.dialog.closeAll();
      });
@@ -65,7 +66,4 @@ export class AppComponent {
     this.isIdle = false;
   }
 
-  logout(){
-    this.authService.logout();
-  }
 }

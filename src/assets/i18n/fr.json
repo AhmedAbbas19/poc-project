@@ -1,0 +1,57 @@
+{
+    "HEADER": {
+        "APP_NAME": "MyApp",
+        "NAV_HOME": "Accueil",
+        "NAV_DASHBOARD": "Tableau de bord",
+        "NAV_PROFILE": "Profil",
+        "NAV_LANGUAGES": "Langues",
+        "NAV_LOGIN": "S'identifier",
+        "NAV_LOGOUT": "Se déconnecter"
+    },
+    "HOME": {
+        "HEADING1": "Essai Hammerjs",
+        "HEADING2": "Essai ng-bootstrap",
+        "ACCORDION": {
+            "1": {
+                "TITLE": "Facile",
+                "CONTENT": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 Wolf Moon Officia Aute, Brunch Dolor Skateboard Non Cupidatat. Camion alimentaire quinoa nesciunt laborum eiusmod. Brunch 3 loup lune temporelle, sunt aliqua y mettre un oiseau calmar café d'origine unique nulla assumenda shoreditch et. Nihil anim Keffiyeh Helvetica, bière artisanale labore wes anderson cred nesciunt sapiente ea proident. Annonce vegan saufeur boucher vice lomo. Leggings occaecat de la bière artisanale de la ferme à la table, synthétiseur esthétique en denim brut nesciunt vous n'avez probablement pas entendu parler d'eux accusamus labore VHS durable."
+            },
+            "2": {
+                "TITLE": "Fantaisie",
+                "CONTENT": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 Wolf Moon Officia Aute, Brunch Dolor Skateboard Non Cupidatat. Camion alimentaire quinoa nesciunt laborum eiusmod. Brunch 3 loup lune temporelle, sunt aliqua y mettre un oiseau calmar café d'origine unique nulla assumenda shoreditch et. Nihil anim Keffiyeh Helvetica, bière artisanale labore wes anderson cred nesciunt sapiente ea proident. Annonce vegan saufeur boucher vice lomo. Leggings occaecat de la bière artisanale de la ferme à la table, synthétiseur esthétique en denim brut nesciunt vous n'avez probablement pas entendu parler d'eux accusamus labore VHS durable."
+            },
+            "3": {
+                "TITLE": "désactivé",
+                "CONTENT": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 Wolf Moon Officia Aute, Brunch Dolor Skateboard Non Cupidatat. Camion alimentaire quinoa nesciunt laborum eiusmod. Brunch 3 loup lune temporelle, sunt aliqua y mettre un oiseau calmar café d'origine unique nulla assumenda shoreditch et. Nihil anim Keffiyeh Helvetica, bière artisanale labore wes anderson cred nesciunt sapiente ea proident. Annonce vegan saufeur boucher vice lomo. Leggings occaecat de la bière artisanale de la ferme à la table, synthétiseur esthétique en denim brut nesciunt vous n'avez probablement pas entendu parler d'eux accusamus labore VHS durable."
+            }
+        }
+    },
+    "DASHBOARD": {
+        "HEADING1": "Tableau de bord",
+        "HEADING2": "Essai ngx-datatable",
+        "NEW_CUSTOMERS": "nouveaux clients",
+        "SKILLS_RATE": "taux de compétences",
+        "NEW_ORDERS": "nouvelles commandes",
+        "REVENUE": "revenu",
+        "GALLERY": "galerie"
+    },
+    "PROFILE": {
+        "HEADING": "Profil",
+        "TAPS": {"TAP1": "Fileuse", "TAP2": "Éditer"},
+        "SPINNER": {"TEXT1": "Tourner sans raison!", "TEXT2": "Merci."},
+        "PANELS": {
+            "PANEL1": {"TITLE": "Données personnelles", "DESCRIPTION": "Tapez votre nom et votre âge", "FIELD1": "Prénom", "FIELD2": "Âge"},
+            "PANEL2": {"TITLE": "Destination", "DESCRIPTION": "Tapez le nom du pays", "FIELD1": "Pays"},
+            "PANEL3": {"TITLE": "À propos", "DESCRIPTION": "Décrivez-vous", "FIELD1": "À propos"},
+            "BUTTON1": "Précédent",
+            "BUTTON2": "Suivant",
+            "BUTTON3": "Terminer"
+        }
+    },
+    "LOGIN": {
+        "HEADING": "S'identifier",
+        "EMAIL": "E-mail",
+        "PASSWORD": "Mot de passe",
+        "BUTTON": "Soumettre"
+    }
+}

@@ -1,68 +1,53 @@
-<h2 class="py-4">Trying ng-bootstrap</h2>
-  <ngb-accordion [closeOthers]="true" activeIds="static-1">
-    <ngb-panel id="static-1" title="Simple">
-      <ng-template ngbPanelContent>
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-        aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-        craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-        labore sustainable VHS.
-      </ng-template>
-    </ngb-panel>
-    <ngb-panel id="static-2">
-      <ng-template ngbPanelTitle>
-        <span>&#9733; <b>Fancy</b> title &#9733;</span>
-      </ng-template>
-      <ng-template ngbPanelContent>
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-        aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-        craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-        labore sustainable VHS.
-      </ng-template>
-    </ngb-panel>
-    <ngb-panel id="static-3" title="Disabled" [disabled]="true">
-      <ng-template ngbPanelContent>
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-        aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-        craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-        labore sustainable VHS.
-      </ng-template>
-    </ngb-panel>
-  </ngb-accordion>
-
-
-  <h2 class="py-4">Trying Hammerjs</h2>
-  <div class="gesture">
-    <div class="gesture__zone">
-      <div class="gesture__square" 
-      [style.left]="square.x+'px'" 
-      [style.top]="square.y+'px'" 
-      [style.transform]="'rotateX('+square.rotateX+'deg)'"
-      (panstart)="onPanStart($event,'square')" 
-      (panmove)="onPan($event,'square')" 
-      (panend)="onPanEnd('square')"
-      (tap)="onTap('square')"
-      >
-        <p>{{square.title}}</p>
-      </div>
-      <div class="gesture__circle"
-      [style.right]="-circle.x+'px'" 
-      [style.top]="circle.y+'px'" 
-      [style.transform]="'scale('+circle.scale+')'" 
-      (panstart)="onPanStart($event,'circle')" 
-      (panmove)="onPan($event,'circle')" 
-      (panend)="onPanEnd('circle')"
-      (doubletap)="onDoubletap('circle')"
-      >
-        <p>{{circle.title}}</p>
-      </div>
+<h2 class="py-4">{{ 'HOME.HEADING1' | translate }}</h2>
+<div class="gesture">
+  <div class="gesture__zone">
+    <div class="gesture__square" 
+    [style.left]="square.x+'px'" 
+    [style.top]="square.y+'px'" 
+    [style.transform]="'rotateX('+square.rotateX+'deg)'"
+    (panstart)="onPanStart($event,'square')" 
+    (panmove)="onPan($event,'square')" 
+    (panend)="onPanEnd('square')"
+    (tap)="onTap('square')"
+    >
+      <p>{{square.title}}</p>
+    </div>
+    <div class="gesture__circle"
+    [style.right]="-circle.x+'px'" 
+    [style.top]="circle.y+'px'" 
+    [style.transform]="'scale('+circle.scale+')'"
+    (panstart)="onPanStart($event,'circle')" 
+    (panmove)="onPan($event,'circle')" 
+    (panend)="onPanEnd('circle')"
+    (doubletap)="onDoubletap('circle')"
+    >
+      <p>{{circle.title}}</p>
     </div>
   </div>
+</div>
+
+<h2 class="py-4">{{ 'HOME.HEADING2' | translate }}</h2>
+<ngb-accordion [closeOthers]="true" activeIds="static-1">
+  <ngb-panel id="static-1" [title]="'HOME.ACCORDION.1.TITLE' | translate">
+    <ng-template ngbPanelContent>
+      {{ 'HOME.ACCORDION.1.CONTENT' | translate }}
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel id="static-2">
+    <ng-template ngbPanelTitle>
+      <span>&#9733; {{ 'HOME.ACCORDION.2.TITLE' | translate }} &#9733;</span>
+    </ng-template>
+    <ng-template ngbPanelContent>
+      {{ 'HOME.ACCORDION.2.CONTENT' | translate }}
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel id="static-3" [title]="'HOME.ACCORDION.3.TITLE' | translate" [disabled]="true">
+    <ng-template ngbPanelContent>
+      {{ 'HOME.ACCORDION.3.CONTENT' | translate }}
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+
 
   
   

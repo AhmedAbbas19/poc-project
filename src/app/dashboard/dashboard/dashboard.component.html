@@ -1,12 +1,12 @@
 <div class="pt-3 d-flex justify-content-between align-items-center">
-  <h2 class="">Dashboard</h2>
+  <h2>{{ 'DASHBOARD.HEADING1' | translate }}</h2>
   <p>{{time}}</p>
 </div>
 
 <div class="row py-4">
   <div class="col-md-4">
     <div class="bg-light p-3 rounded">
-      <h6>New Customers</h6>
+      <h6>{{ 'DASHBOARD.NEW_CUSTOMERS' | translate }}</h6>
       <app-line-chart
         [chartdata]="newCustomersData.data"
         [chartlabels]="newCustomersData.labels"
@@ -17,7 +17,7 @@
   </div>
   <div class="col-md-4">
     <div class="bg-light p-3 rounded">
-      <h6>Skills Rate</h6>
+      <h6>{{ 'DASHBOARD.SKILLS_RATE' | translate }}</h6>
       <app-radar-chart
         [chartdata]="skillsRateData.data"
         [chartlabels]="skillsRateData.labels"
@@ -28,7 +28,7 @@
   </div>
   <div class="col-md-4">
     <div class="bg-light p-3 rounded">
-      <h6>New Orders</h6>
+      <h6>{{ 'DASHBOARD.NEW_ORDERS' | translate }}</h6>
       <app-bar-chart
         [chartdata]="newOrdersData.data"
         [chartlabels]="newOrdersData.labels"
@@ -42,7 +42,7 @@
 <div class="row py-4">
   <div class="col-md-7">
     <div class="bg-light p-3 rounded">
-      <h6>Revenue</h6>
+      <h6>{{ 'DASHBOARD.REVENUE' | translate }}</h6>
       <app-bar-chart
         [chartdata]="newOrdersData.data"
         [chartlabels]="newOrdersData.labels"
@@ -53,14 +53,14 @@
   </div>
   <div class="col-md-5">
     <div class="bg-light p-3 rounded">
-      <h6>Gallery (ngx-swipper)</h6>
+      <h6>{{ 'DASHBOARD.GALLERY' | translate }} (ngx-swipper)</h6>
       <app-gallery></app-gallery>
     </div>
   </div>
 </div>
 
 
-<h2 class="py-4">Trying ngx-datatable</h2>
+<h2 class="py-4">{{ 'DASHBOARD.HEADING2' | translate }}</h2>
 <div class="row">
     <div class="col-md-12">
         <ngx-datatable

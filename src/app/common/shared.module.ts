@@ -5,7 +5,7 @@ import { ChartsModule } from 'ng2-charts';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { RadarChartComponent } from './components/radar-chart/radar-chart.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import {NgSwipperModule} from "./ngSwipper.module"
+import {NgSwipperModule} from "./ngSwipper.module";
 
 
 @NgModule({

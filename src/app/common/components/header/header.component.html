@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" class="d-flex justify-content-between align-items-center">
+    <div>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <span>{{ 'HEADER.APP_NAME' | translate }} <small>{{language | uppercase}}</small></span>
+          <button mat-button routerLink="home" routerLinkActive="active">{{'HEADER.NAV_HOME' | translate}}</button>
+          <button mat-button routerLink="dashboard" routerLinkActive="active">{{'HEADER.NAV_DASHBOARD' | translate}}</button>
+          <button mat-button routerLink="profile" routerLinkActive="active">{{'HEADER.NAV_PROFILE' | translate}}</button>
+    </div>
+
+    <div>
+        <mat-form-field >
+            <mat-select [(value)]="language" (selectionChange)="onChangeLanguage(language)">
+              <mat-option *ngFor="let lang of languages" [value]="lang.code">
+                {{lang.name}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button mat-button routerLink="auth" *ngIf="!isAuthenticated">{{'HEADER.NAV_LOGIN' | translate}}</button>
+        <button mat-button *ngIf="isAuthenticated" (click)="logout()">{{'HEADER.NAV_LOGOUT' | translate}}</button>
+    </div>
+  </mat-toolbar>

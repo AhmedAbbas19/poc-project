@@ -1,0 +1,58 @@
+{
+    "HEADER": {
+        "APP_NAME": "MyApp",
+        "NAV_HOME": "Zuhause",
+        "NAV_DASHBOARD": "Instrumententafel",
+        "NAV_PROFILE": "Profil",
+        "NAV_LANGUAGES": "Sprachen",
+        "NAV_LOGIN": "Anmeldung",
+        "NAV_LOGOUT": "Abmelden"
+    },
+    "HOME": {
+        "HEADING1": "Versuch Hammerjs",
+        "HEADING2": "Versuch Ngx-Bootstrap",
+        "ACCORDION": {
+            "1": {
+                "TITEL": "Einfach",
+                "CONTENT": "Anim pariatur cliche reprehenderit, enim eiusmod High Life Akkusamus Terry Richardson und Tintenfisch. 3 Wolf Mond Officia Aute, nicht Cupidatat Skateboard Dolor Brunch. Food Truck Quinoa Nesciunt Laborum Eiusmod. Brunch 3 Wolf Mond tempor, Sunt Aliqua setzen einen Vogel darauf Tintenfisch Single-Origin-Kaffee nulla davon ausgehen, Shoreditch et. Nihil anim keffiyeh helvetica, Craft Beer Labore Wes Anderson Cred Nesciunt Sapiente ea Proident. Ad vegane Excepteur Metzger Vice Lomo Sie haben wahrscheinlich noch nie von ihnen gehört. Akkusamus arbeitet mit nachhaltiger VHS. "
+            },
+            "2": {
+                "TITEL": "Phantasie",
+                "CONTENT": "Anim pariatur cliche reprehenderit, enim eiusmod High Life Akkusamus Terry Richardson und Tintenfisch. 3 Wolf Mond Officia Aute, nicht Cupidatat Skateboard Dolor Brunch. Food Truck Quinoa Nesciunt Laborum Eiusmod. Brunch 3 Wolf Mond tempor, Sunt Aliqua setzen einen Vogel darauf Tintenfisch Single-Origin-Kaffee nulla davon ausgehen, Shoreditch et. Nihil anim keffiyeh helvetica, Craft Beer Labore Wes Anderson Cred Nesciunt Sapiente ea Proident. Ad vegane Excepteur Metzger Vice Lomo Sie haben wahrscheinlich noch nie von ihnen gehört. Akkusamus arbeitet mit nachhaltiger VHS. "
+            },
+            "3": {
+                "TITEL": "Deaktiviert",
+                "CONTENT": "Anim pariatur cliche reprehenderit, enim eiusmod High Life Akkusamus Terry Richardson und Tintenfisch. 3 Wolf Mond Officia Aute, nicht Cupidatat Skateboard Dolor Brunch. Food Truck Quinoa Nesciunt Laborum Eiusmod. Brunch 3 Wolf Mond tempor, Sunt Aliqua setzen einen Vogel darauf Tintenfisch Single-Origin-Kaffee nulla davon ausgehen, Shoreditch et. Nihil anim keffiyeh helvetica, Craft Beer Labore Wes Anderson Cred Nesciunt Sapiente ea Proident. Ad vegane Excepteur Metzger Vice Lomo Sie haben wahrscheinlich noch nie von ihnen gehört. Akkusamus arbeitet mit nachhaltiger VHS. "
+            }
+        }
+    },
+    "DASHBOARD": {
+        "HEADING1": "Instrumententafel",
+        "HEADING2": "Ngx-datatable versuchen",
+        "NEW_CUSTOMERS": "Neukunden",
+        "SKILLS_RATE": "Skills Rate",
+        "NEW_ORDERS": "neue Bestellungen",
+        "REVENUE": "Einnahmen",
+        "GALLERY": "Galerie"
+    },
+    "PROFILE": {
+        "HEADING": "Profil",
+        "TAPS": {"TAP1": "Spinner", "TAP2": "Bearbeiten"},
+        "SPINNER": {"TEXT1": "Ohne Grund drehen!", "TEXT2": "Danke."},
+        "PANELS": {
+            "PANEL1": {"TITEL": "Persönliche Daten", "BESCHREIBUNG": "Geben Sie Ihren Namen und Ihr Alter ein", "FELD1": "Vorname", "FELD2": "Alter"},
+            "PANEL2": {"TITEL": "Ziel", "BESCHREIBUNG": "Geben Sie den Ländernamen ein", "FELD1": "Land"},
+            "PANEL3": {"TITLE": "About", "DESCRIPTION": "Beschreibe dich selbst", "FIELD1": "About"},
+            "BUTTON1": "Zurück",
+            "BUTTON2": "Weiter",
+            "BUTTON3": "Fertig stellen"
+
+        }
+    },
+    "LOGIN": {
+        "HEADING": "Anmeldung",
+        "EMAIL": "E-mail",
+        "PASSWORD": "Passwort",
+        "BUTTON": "Einreichen"
+    }
+}

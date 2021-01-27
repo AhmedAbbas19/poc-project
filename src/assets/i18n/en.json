@@ -1,0 +1,57 @@
+{
+    "HEADER": {
+        "APP_NAME": "MyApp",
+        "NAV_HOME": "Home",
+        "NAV_DASHBOARD": "Dashboard",
+        "NAV_PROFILE": "Profile",
+        "NAV_LANGUAGES": "Languages",
+        "NAV_LOGIN": "Login",
+        "NAV_LOGOUT": "Logout"
+    },
+    "HOME": {
+        "HEADING1": "Trying Hammerjs",
+        "HEADING2": "Trying ngx-bootstrap",
+        "ACCORDION": {
+            "1": {
+                "TITLE": "Simple",
+                "CONTENT": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS."
+            },
+            "2": {
+                "TITLE": "Fancy",
+                "CONTENT": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS."
+            },
+            "3": {
+                "TITLE": "Disabled",
+                "CONTENT": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS."
+            }
+        }
+    },
+    "DASHBOARD": {
+        "HEADING1": "Dashboard",
+        "HEADING2": "Trying ngx-datatable",
+        "NEW_CUSTOMERS": "new customers",
+        "SKILLS_RATE": "skills rate",
+        "NEW_ORDERS": "new orders",
+        "REVENUE": "revenue",
+        "GALLERY": "gallery"
+    },
+    "PROFILE": {
+        "HEADING": "Profile",
+        "TAPS": {"TAP1": "Spinner", "TAP2": "Edit"},
+        "SPINNER": {"TEXT1": "Spinning for no reason!", "TEXT2": "Thank you."},
+        "PANELS": {
+            "PANEL1": {"TITLE": "Personal data", "DESCRIPTION": "Type your name and age", "FIELD1": "First Name", "FIELD2": "Age"},
+            "PANEL2": {"TITLE": "Destination", "DESCRIPTION": "Type the country name", "FIELD1": "Country"},
+            "PANEL3": {"TITLE": "About", "DESCRIPTION": "Describe yourself", "FIELD1": "About"},
+            "BUTTON1": "Previous",
+            "BUTTON2": "Next",
+            "BUTTON3": "Finish"
+        }
+    },
+    "LOGIN": {
+        "HEADING": "Login",
+        "EMAIL": "Email",
+        "PASSWORD": "Password",
+        "BUTTON": "Submit"
+    }
+}

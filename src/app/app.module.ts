@@ -8,7 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NgIdleKeepaliveModule } from '@ng-idle/keepalive'; // this includes the core NgIdleModule but includes keepalive providers for easy wireup
 
 import { MomentModule } from 'angular2-moment'; // optional, provides moment-style pipes for date formatting
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import * as Hammer from 'hammerjs';
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
@@ -16,8 +16,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogComponent } from './common/components/dialog/dialog.component';
 import { MaterialModule } from './common/material.module';
 
-import { SwiperModule } from 'ngx-swiper-wrapper';
+import { HeaderComponent } from './common/components/header/header.component';
 
+import {TranslateModule, TranslateLoader, TranslateService} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any> {
@@ -29,7 +35,8 @@ export class MyHammerConfig extends HammerGestureConfig {
   declarations: [
     AppComponent,
     HomeComponent,
-    DialogComponent
+    DialogComponent,
+    HeaderComponent
   ],
   imports: [
   BrowserModule,
@@ -41,7 +48,14 @@ export class MyHammerConfig extends HammerGestureConfig {
     HammerModule,
     BrowserAnimationsModule,
     MaterialModule,
-    SwiperModule
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      },
+      isolate: true
+  })
   ],
   providers: [
     {
