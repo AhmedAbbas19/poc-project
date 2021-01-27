@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from '../common/material.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -16,6 +17,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [LoginComponent],
   imports: [
     CommonModule,
+    MaterialModule,
     AuthRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
