@@ -40,8 +40,8 @@
         "TAPS": {"TAP1": "Spinner", "TAP2": "Bearbeiten"},
         "SPINNER": {"TEXT1": "Ohne Grund drehen!", "TEXT2": "Danke."},
         "PANELS": {
-            "PANEL1": {"TITEL": "Persönliche Daten", "BESCHREIBUNG": "Geben Sie Ihren Namen und Ihr Alter ein", "FELD1": "Vorname", "FELD2": "Alter"},
-            "PANEL2": {"TITEL": "Ziel", "BESCHREIBUNG": "Geben Sie den Ländernamen ein", "FELD1": "Land"},
+            "PANEL1": {"TITLE": "Persönliche Daten", "DESCRIPTION": "Geben Sie Ihren Namen und Ihr Alter ein", "FIELD1": "Vorname", "FIELD2": "Alter"},
+            "PANEL2": {"TITLE": "Ziel", "DESCRIPTION": "Geben Sie den Ländernamen ein", "FIELD1": "Land"},
             "PANEL3": {"TITLE": "About", "DESCRIPTION": "Beschreibe dich selbst", "FIELD1": "About"},
             "BUTTON1": "Zurück",
             "BUTTON2": "Weiter",

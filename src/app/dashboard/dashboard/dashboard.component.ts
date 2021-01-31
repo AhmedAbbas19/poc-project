@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { newCustomers, newOrders, skillsRate, projects } from "../chartsdata";
 import * as moment from 'moment-timezone'
-import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 import { NgxTranslateService } from 'src/app/common/services/ngx-translate.service';
 
 @Component({

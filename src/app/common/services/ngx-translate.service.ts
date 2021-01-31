@@ -7,9 +7,15 @@ import { BehaviorSubject } from 'rxjs';
 export class NgxTranslateService {
 
     currentLang = new BehaviorSubject<string>('en')
-    constructor() { }
+    constructor() { 
+      const clientLang = localStorage.getItem('lang');
+      if(clientLang){
+        this.currentLang.next(clientLang)
+      }
+    }
 
     changeLanguage(language){
+      localStorage.setItem('lang', language)
         this.currentLang.next(language)
     }
 
