@@ -15,11 +15,13 @@ import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-br
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogComponent } from './common/components/dialog/dialog.component';
 import { MaterialModule } from './common/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HeaderComponent } from './common/components/header/header.component';
 
 import {TranslateModule, TranslateLoader, TranslateService} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { SideNavComponent } from './common/components/sidenav/sidenav.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -36,7 +38,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     AppComponent,
     HomeComponent,
     DialogComponent,
-    HeaderComponent
+    HeaderComponent,
+    SideNavComponent
   ],
   imports: [
   BrowserModule,
@@ -48,6 +51,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     HammerModule,
     BrowserAnimationsModule,
     MaterialModule,
+    FlexLayoutModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,

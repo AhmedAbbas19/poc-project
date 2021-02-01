@@ -5,7 +5,7 @@
 
 <div class="row py-4">
   <div class="col-md-4">
-    <div class="bg-light p-3 rounded">
+    <mat-card>
       <h6>{{ 'DASHBOARD.NEW_CUSTOMERS' | translate }}</h6>
       <app-line-chart
         [chartdata]="newCustomersData.data"
@@ -13,10 +13,10 @@
         [chartoptions]="newCustomersData.options"
         [height]="'230'"
       ></app-line-chart>
-    </div>
+    </mat-card>
   </div>
   <div class="col-md-4">
-    <div class="bg-light p-3 rounded">
+    <mat-card>
       <h6>{{ 'DASHBOARD.SKILLS_RATE' | translate }}</h6>
       <app-radar-chart
         [chartdata]="skillsRateData.data"
@@ -24,10 +24,10 @@
         [chartoptions]="skillsRateData.options"
         [height]="'230'"
       ></app-radar-chart>
-    </div>
+    </mat-card>
   </div>
   <div class="col-md-4">
-    <div class="bg-light p-3 rounded">
+    <mat-card>
       <h6>{{ 'DASHBOARD.NEW_ORDERS' | translate }}</h6>
       <app-bar-chart
         [chartdata]="newOrdersData.data"
@@ -35,13 +35,13 @@
         [chartoptions]="newOrdersData.options"
         [height]="'230'"
       ></app-bar-chart>
-    </div>
+    </mat-card>
   </div>
 </div>
 
 <div class="row py-4">
   <div class="col-md-7">
-    <div class="bg-light p-3 rounded">
+    <mat-card>
       <h6>{{ 'DASHBOARD.REVENUE' | translate }}</h6>
       <app-bar-chart
         [chartdata]="newOrdersData.data"
@@ -49,20 +49,19 @@
         [chartoptions]="newOrdersData.options"
         [height]="'300'"
       ></app-bar-chart>
-    </div>
+    </mat-card>
   </div>
   <div class="col-md-5">
-    <div class="bg-light p-3 rounded">
+    <mat-card>
       <h6>{{ 'DASHBOARD.GALLERY' | translate }} (ngx-swipper)</h6>
       <app-gallery></app-gallery>
-    </div>
+    </mat-card>
   </div>
 </div>
 
 
 <h2 class="py-4">{{ 'DASHBOARD.HEADING2' | translate }}</h2>
-<div class="row">
-    <div class="col-md-12">
+
         <ngx-datatable
         class="material fullwidth"
         [rows]="rows"
@@ -76,5 +75,3 @@
         [scrollbarH]="true"
       >
       </ngx-datatable>
-    </div>
-</div>

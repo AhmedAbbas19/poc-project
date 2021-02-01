@@ -1,23 +1,54 @@
-<mat-toolbar color="primary" class="d-flex justify-content-between align-items-center">
-    <div>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-            <mat-icon>menu</mat-icon>
-          </button>
-          <span>{{ 'HEADER.APP_NAME' | translate }} <small>{{language | uppercase}}</small></span>
-          <button mat-button routerLink="home" routerLinkActive="active">{{'HEADER.NAV_HOME' | translate}}</button>
-          <button mat-button routerLink="dashboard" routerLinkActive="active">{{'HEADER.NAV_DASHBOARD' | translate}}</button>
-          <button mat-button routerLink="profile" routerLinkActive="active">{{'HEADER.NAV_PROFILE' | translate}}</button>
+<div class="rela">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button fxShow="false" fxShow.lt-md (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>{{ 'HEADER.APP_NAME' | translate }} <small>{{language | uppercase}}</small></span>
+    <div fxShow="true" fxHide.lt-sm>
+      <button mat-button routerLink="home" routerLinkActive="active">{{'HEADER.NAV_HOME' | translate}}</button>
+    <button mat-button routerLink="dashboard" routerLinkActive="active">{{'HEADER.NAV_DASHBOARD' | translate}}</button>
+    <button mat-button routerLink="profile" routerLinkActive="active">{{'HEADER.NAV_PROFILE' | translate}}</button>
     </div>
-
-    <div>
-        <mat-form-field >
-            <mat-select [(value)]="language" (selectionChange)="onChangeLanguage(language)">
-              <mat-option *ngFor="let lang of languages" [value]="lang.code">
-                {{lang.name}}
-              </mat-option>
-            </mat-select>
+      <span class="menu-spacer"></span>
+      <div fxShow="true" fxHide.lt-md>
+        <mat-form-field>
+          <mat-select [(value)]="language" (selectionChange)="onChangeLanguage(language)">
+            <mat-option *ngFor="let lang of languages" [value]="lang.code">
+              {{lang.name}}
+            </mat-option>
+          </mat-select>
         </mat-form-field>
         <button mat-button routerLink="auth" *ngIf="!isAuthenticated">{{'HEADER.NAV_LOGIN' | translate}}</button>
         <button mat-button *ngIf="isAuthenticated" (click)="logout()">{{'HEADER.NAV_LOGOUT' | translate}}</button>
-    </div>
+      </div>
+      <span class="material-icons" role="button" (click)="darkMode()" *ngIf="!darkModeOn">dark_mode</span>
+      <span class="material-icons" role="button" (click)="lightMode()" *ngIf="darkModeOn">light_mode</span>
+    </mat-toolbar-row>
   </mat-toolbar>
+  <mat-drawer-container class="example-container">
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <div class="d-flex flex-column" fxShow="false" fxShow.lt-sm>
+        <button mat-button routerLink="home" routerLinkActive="active">{{'HEADER.NAV_HOME' | translate}}</button>
+      <button mat-button routerLink="dashboard" routerLinkActive="active">{{'HEADER.NAV_DASHBOARD' | translate}}</button>
+      <button mat-button routerLink="profile" routerLinkActive="active">{{'HEADER.NAV_PROFILE' | translate}}</button>
+      </div>
+      <div class="d-flex flex-column">
+        <button mat-button routerLink="auth" *ngIf="!isAuthenticated">{{'HEADER.NAV_LOGIN' | translate}}</button>
+        <button mat-button *ngIf="isAuthenticated" (click)="logout()">{{'HEADER.NAV_LOGOUT' | translate}}</button>
+        <mat-form-field>
+          <mat-select [(value)]="language" (selectionChange)="onChangeLanguage(language)">
+            <mat-option *ngFor="let lang of languages" [value]="lang.code">
+              {{lang.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+    </div>
+  
+  </mat-drawer-container>
+</div>
+

@@ -8,6 +8,7 @@ import { NgxTranslateModule } from '../common/ngxTranslate.module';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from '../common/material.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -20,6 +21,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     DashboardRoutingModule,
     NgxTranslateModule,
     HttpClientModule,
+    MaterialModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,

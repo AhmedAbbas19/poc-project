@@ -7,4 +7,34 @@
 @import '~@swimlane/ngx-datatable/assets/icons.css';
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #303030; color: #a5a5a5;}
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    // background-color: #303030; 
+    // color: #a5a5a5;
+}
+
+@import '~@angular/material/theming';
+
+// always include only once per project
+@include mat-core();
+
+// import our custom theme
+@import './assets/themes/my-light-theme.scss';
+@import './assets/themes/my-dark-theme.scss';
+
+// specify theme class eg: <body class="my-theme"> ... </body>
+.my-light-theme {
+  // use our theme with angular-material-theme mixin
+  @include angular-material-theme($my-light-theme);
+  background-color:#f7f7f7; 
+  color: #303030;
+}
+
+.my-dark-theme {
+    // use our theme with angular-material-theme mixin
+    @include angular-material-theme($my-dark-theme);
+    background-color: #303030; 
+    color: #a5a5a5;
+  }
+  

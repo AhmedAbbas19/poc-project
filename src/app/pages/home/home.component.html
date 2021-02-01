@@ -1,5 +1,5 @@
 <h2 class="py-4">{{ 'HOME.HEADING1' | translate }}</h2>
-<div class="gesture">
+<mat-card class="gesture">
   <div class="gesture__zone">
     <div class="gesture__square" 
     [style.left]="square.x+'px'" 
@@ -24,7 +24,7 @@
       <p>{{circle.title}}</p>
     </div>
   </div>
-</div>
+</mat-card>
 
 <h2 class="py-4">{{ 'HOME.HEADING2' | translate }}</h2>
 <ngb-accordion [closeOthers]="true" activeIds="static-1">
